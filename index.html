@@ -42,12 +42,18 @@
     <section class="top">
       <img
         class="top__img"
-        src="./images/designer-img.png"
+        src="./images/designer-img.jpg"
+        srcset="
+          ./images/designer-img-384w.jpg 384w,
+          ./images/designer-img.jpg      750w
+        "
+        sizes="(max-width:768px) 384px, (max-width:1200px) 384px, (max-width:1330px) 768px, 768px"
         alt="photo designer"
       />
       <div class="top__desc">
         <h1 class="top__title">
-          I’m Robin Williams. A Product Designer <span> based in Italy. </span>
+          I’m Robin Williams.<br />
+          A Product Designer<br /><span>based in Italy.</span>
         </h1>
         <p class="top__text">
           I’m probably the most passionate designer you will ever get to work
@@ -113,9 +119,7 @@
         </p>
         <a class="about__link" href="#">More about me</a>
       </div>
-      <div class="about__images">
-        <!-- <img class="about__img" src="about-img.png" alt="" /> -->
-      </div>
+      <div class="about__images"></div>
     </section>
     <!-- /.about section-primary -->
     <section class="skills section-primary">
@@ -130,51 +134,52 @@
             </p>
           </div>
           <div class="skills__content-inner">
-          <div class="skills__content-item">
-            <img
-              class="skills__content-img"
-              src="./images/product-logo.svg"
-              alt="product logo"
-            />
-            <h3 class="skills__content-title title--h3">Product Design</h3>
-            <p class="skills__content-text">
-              Working at Facebook has taught me a lot about how to understand
-              users, solve problems and build great products.
-            </p>
-            <img
-              class="skills__content-img"
-              src="./images/motion-logo.svg"
-              alt="motion logo"
-            />
-            <h3 class="skills__content-title title--h3">Motion Design</h3>
-            <p class="skills__content-text">
-              I started my design journey with motion design in my college days.
-              Motion is something that really fascinates me because of the
-              flexibility of story telling.
-            </p>
-          </div>
-          <div class="skills__content-item">
-            <img
-              class="skills__content-img"
-              src="./images/visual-logo.svg"
-              alt="visual logo"
-            />
-            <h3 class="skills__content-title title--h3">Visual Design</h3>
-            <p class="skills__content-text">
-              My experience at dribbble has helped me learn to develop the eye
-              for design. Colors, typography, layout and the whole package.
-            </p>
-            <img
-              class="skills__content-img"
-              src="./images/photography-logo.svg"
-              alt="photography logo"
-            />
-            <h3 class="skills__content-title title--h3">Photography</h3>
-            <p class="skills__content-text">
-              Clicking pictures really brings out the creative in me. Phtography
-              really makes you look and percieve things in a different way.
-            </p>
-          </div>
+            <div class="skills__content-item">
+              <img
+                class="skills__content-img"
+                src="./images/product-logo.svg"
+                alt="product logo"
+              />
+              <h3 class="skills__content-title title--h3">Product Design</h3>
+              <p class="skills__content-text">
+                Working at Facebook has taught me a lot about how to understand
+                users, solve problems and build great products.
+              </p>
+              <img
+                class="skills__content-img"
+                src="./images/motion-logo.svg"
+                alt="motion logo"
+              />
+              <h3 class="skills__content-title title--h3">Motion Design</h3>
+              <p class="skills__content-text">
+                I started my design journey with motion design in my college
+                days. Motion is something that really fascinates me because of
+                the flexibility of story telling.
+              </p>
+            </div>
+            <div class="skills__content-item">
+              <img
+                class="skills__content-img"
+                src="./images/visual-logo.svg"
+                alt="visual logo"
+              />
+              <h3 class="skills__content-title title--h3">Visual Design</h3>
+              <p class="skills__content-text">
+                My experience at dribbble has helped me learn to develop the eye
+                for design. Colors, typography, layout and the whole package.
+              </p>
+              <img
+                class="skills__content-img"
+                src="./images/photography-logo.svg"
+                alt="photography logo"
+              />
+              <h3 class="skills__content-title title--h3">Photography</h3>
+              <p class="skills__content-text">
+                Clicking pictures really brings out the creative in me.
+                Phtography really makes you look and percieve things in a
+                different way.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -289,9 +294,7 @@
         </p>
         <a class="about__link" href="#">Follow me on IG</a>
       </div>
-      <div class="about__images">
-        <img class="about__img" src="./images/plane-img.png" alt="" />
-      </div>
+      <div class="about__images--instagram"></div>
     </section>
     <!-- /.about section-primary -->
     <section class="dribbble">
@@ -311,7 +314,7 @@
     <section class="reviews section-primary">
       <div class="container">
         <div class="reviews__content">
-          <div class="col">
+          <div class="reviews__content-col">
             <h2 class="title--h2">This is what people say about me</h2>
             <p class="section-primary__text">
               Here are a few lines from people who I have worked with over the
@@ -319,11 +322,16 @@
             </p>
             <a class="dribbble__link" href="#">See all testimonials</a>
           </div>
-          <div class="col">
+          <div class="reviews__content-col">
             <div class="reviews__content-box">
               <img
                 class="reviews__content-img"
-                src="./images/review-img.png"
+                srcset="
+                  ./images/review-img-332w.jpg 332w,
+                  ./images/review-img.jpg      636w
+                "
+                sizes="(max-width:768px) 332px, 768px"
+                src="./images/review-img.jpg"
                 alt="laptop phone"
               />
               <div class="reviews__content-desc">
@@ -340,8 +348,13 @@
             <div class="reviews__content-box">
               <img
                 class="reviews__content-img"
-                src="./images/review-img2.png"
-                alt="laptop phone"
+                srcset="
+                  ./images/review-img2-332w.jpg 332w,
+                  ./images/review-img2.jpg      636w
+                "
+                sizes="(max-width:768px) 332px, 768px"
+                src="./images/review2-img.jpg"
+                alt="meeting"
               />
               <div class="reviews__content-desc">
                 <p class="reviews__content-text">
@@ -356,8 +369,13 @@
             <div class="reviews__content-box">
               <img
                 class="reviews__content-img"
-                src="./images/review-img3.png"
-                alt="laptop phone"
+                srcset="
+                  ./images/review-img3-332w.jpg 332w,
+                  ./images/review-img3.jpg      636w
+                "
+                sizes="(max-width:768px) 332px, 768px"
+                src="./images/review3-img.jpg"
+                alt="work office"
               />
               <div class="reviews__content-desc">
                 <p class="reviews__content-text">
@@ -482,16 +500,16 @@
     <!-- /.feedback section-primary -->
     <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer-col">
           <a class="logo" href="#">
             <img class="nav-menu__logo" src="./images/logo.svg" alt="logo"
           /></a>
           <div class="footer__social">
-            <a class="footer__social-link" href="#"
+            <a class="footer__social-link hvr-grow" href="#"
               ><img src="./images/twitter.svg" alt="twitter logo" /> </a
-            ><a class="footer__social-link" href="#"
+            ><a class="footer__social-link hvr-grow" href="#"
               ><img src="./images/dribbble.svg" alt="dribble logo" /></a
-            ><a class="footer__social-link" href="#"
+            ><a class="footer__social-link hvr-grow" href="#"
               ><img src="./images/linkedin.svg" alt="linkedin logo"
             /></a>
           </div>
