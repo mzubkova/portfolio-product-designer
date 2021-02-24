@@ -79,7 +79,7 @@
       </div>
     </section>
     <!-- /.top -->
-    <section class="work section-primary">
+    <section class="work section-primary" id="experience-page">
       <div class="container">
         <p class="section-primary__desc">work experience</p>
         <h2 class="title--h2">
@@ -201,7 +201,7 @@
       </div>
     </section>
     <!-- /.skills section-primary -->
-    <section class="carousel">
+    <div class="carousel">
       <div class="carousel__slider">
         <div class="carousel-box">
           <img src="./images/epiq-logo.svg" alt="cbre" />
@@ -222,9 +222,9 @@
           <img src="./images/fresh-logo.svg" alt="fresh" />
         </div>
       </div>
-    </section>
+    </div>
     <!-- /.carousel -->
-    <section class="projects section-primary">
+    <section class="projects section-primary" id="work-page">
       <div class="container">
         <div class="projects__content">
           <div class="projects__content-col">
@@ -414,7 +414,7 @@
       </div>
     </section>
     <!-- /.reviews section-primary -->
-    <section class="photography section-primary">
+    <section class="photography section-primary" id="photography-page">
       <div class="container">
         <h2 class="title--h2">Photography</h2>
         <p class="section-primary__text">
@@ -485,7 +485,7 @@
       </div>
     </section>
     <!-- /.photography section-primary -->
-    <section class="feedback section-primary">
+    <section class="feedback section-primary" id="contact-page">
       <div class="feedback__content">
         <div class="feedback__content-desc">
           <h2 class="title--h2">Let’s get started</h2>
@@ -496,21 +496,12 @@
         </div>
         <div class="feedback__content-form">
           <form class="feedback-form">
-            <label class="feedback-form__label" for="name">Name</label>
-            <input class="feedback-form__input" type="text" name="name" id="" />
-            <label class="feedback-form__label" for="email">Email</label>
-            <input
-              class="feedback-form__input"
-              type="text"
-              name="email"
-              id=""
-            />
-            <label class="feedback-form__label" for="message">Message</label>
-            <textarea
-              class="feedback-form__input"
-              name="message"
-              id=""
-            ></textarea>
+            <label class="feedback-form__label">Name</label>
+            <input class="feedback-form__input" type="text" name="name" />
+            <label class="feedback-form__label">Email</label>
+            <input class="feedback-form__input" type="text" name="email" />
+            <label class="feedback-form__label">Message</label>
+            <textarea class="feedback-form__input" name="message"></textarea>
             <button class="btn feedback-form__btn" type="submit">
               Let’s get started
             </button>
