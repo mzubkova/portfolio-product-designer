@@ -71,9 +71,15 @@ textarea {
   color: inherit;
   letter-spacing: inherit;
   margin: 0;
-  outline: 0 !important;
+  outline: 0;
   padding: 0;
   text-decoration: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 button {
@@ -81,7 +87,6 @@ button {
 }
 
 textarea {
-  outline: none;
   overflow: hidden;
   padding: 15px;
   resize: none;
@@ -219,6 +224,7 @@ select:-webkit-autofill:focus {
   transform: scale(0.98);
   box-shadow: none;
 }
+
 .nav-menu__item:hover .nav-menu__link:hover {
   transform: scale(1);
   filter: blur(0px);
@@ -565,6 +571,7 @@ select:-webkit-autofill:focus {
   align-items: center;
   padding-bottom: 20px;
 }
+
 .tabs__nav-item + .tabs__nav-item {
   margin-left: 20px;
 }
@@ -691,6 +698,8 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
+/* Animations */
+
 .hvr-underline-from-left {
   display: inline-block;
   vertical-align: middle;
@@ -700,6 +709,7 @@ select:-webkit-autofill:focus {
   position: relative;
   overflow: hidden;
 }
+
 .hvr-underline-from-left:before {
   content: "";
   position: absolute;
@@ -716,6 +726,7 @@ select:-webkit-autofill:focus {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
 .hvr-underline-from-left:hover:before,
 .hvr-underline-from-left:focus:before,
 .hvr-underline-from-left:active:before {
@@ -733,11 +744,113 @@ select:-webkit-autofill:focus {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 @media (max-width: 1330px) {
@@ -869,6 +982,12 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 992px) {
+  .top__title {
+    font-size: 5.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .section-primary {
     padding: 80px 40px;
@@ -993,6 +1112,7 @@ select:-webkit-autofill:focus {
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
   }
+
   .navBurger:before,
   .navBurger:after {
     content: "";
@@ -1007,9 +1127,11 @@ select:-webkit-autofill:focus {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+
   .navBurger:before {
     top: -10px;
   }
+
   .navBurger:after {
     width: 80%;
   }
@@ -1018,6 +1140,7 @@ select:-webkit-autofill:focus {
     background: transparent;
     background-clip: content-box;
   }
+
   .navBurger.active:before {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
@@ -1025,6 +1148,7 @@ select:-webkit-autofill:focus {
     background: #eee;
     width: 110%;
   }
+
   .navBurger.active:after {
     bottom: 0;
     -webkit-transform: rotate(-135deg);
@@ -1050,6 +1174,7 @@ select:-webkit-autofill:focus {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
   }
+
   .overlay.open {
     z-index: 9;
     opacity: 0.99;
@@ -1057,6 +1182,7 @@ select:-webkit-autofill:focus {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+
   .overlay.open li {
     display: block;
     -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
@@ -1069,18 +1195,22 @@ select:-webkit-autofill:focus {
     -webkit-transform-origin: right bottom;
     transform-origin: right bottom;
   }
+
   .overlay.open li:nth-of-type(2) {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
   }
+
   .overlay.open li:nth-of-type(3) {
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
   }
+
   .overlay.open li:nth-of-type(4) {
     -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
   }
+
   .overlay.open li:nth-of-type(5) {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
@@ -1092,6 +1222,7 @@ select:-webkit-autofill:focus {
     right: 10vw;
     left: 0;
   }
+
   .overlayMenu ul {
     list-style: none;
     padding: 0;
@@ -1100,12 +1231,14 @@ select:-webkit-autofill:focus {
     position: relative;
     height: 100%;
   }
+
   .overlayMenu ul li {
     display: block;
     position: relative;
     opacity: 0;
     width: 100%;
   }
+
   .overlayMenu ul li a {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.09);
@@ -1117,6 +1250,7 @@ select:-webkit-autofill:focus {
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
+
   .overlayMenu ul li a:hover,
   .overlayMenu ul li a:active,
   .overlayMenu ul li a:focus {
@@ -1255,7 +1389,7 @@ select:-webkit-autofill:focus {
   .about__images--instagram {
     width: 100%;
     min-height: 450px;
-    background: url(../images/about-img-768w.png) no-repeat;
+    background: url(../images/about-img-768w.png) no-repeat cover center;
     background-size: cover;
     background-position: center;
   }
@@ -1346,6 +1480,7 @@ select:-webkit-autofill:focus {
   .feedback__content {
     flex-wrap: wrap;
   }
+
   .feedback__content-desc {
     width: 100%;
     padding-right: 0;

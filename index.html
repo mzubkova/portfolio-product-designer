@@ -13,12 +13,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
-    <link rel="stylesheet" href="./css/slick-theme.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Portfolio Robin Williams</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__img">
         <a class="logo" href="#">
           <img class="nav-menu__logo" src="./images/logo.svg" alt="logo"
@@ -54,8 +53,7 @@
       <div class="navBurger" role="navigation" id="navToggle"></div>
     </header>
     <!-- .header -->
-
-    <section class="top">
+    <section class="top" id="about">
       <img
         class="top__img"
         src="./images/designer-img.jpg"
@@ -63,7 +61,7 @@
           ./images/designer-img-384w.jpg 384w,
           ./images/designer-img.jpg      750w
         "
-        sizes="(max-width:700px) 768px, (max-width:768px) 384px, (max-width:1200px) 384px, (max-width:1330px) 768px, 768px"
+        sizes="(max-width:700px) 768px, (max-width:768px) 384px, (max-width:992px) 500px, (max-width:1200px) 768px, (max-width:1330px) 768px, 768px"
         alt="photo designer"
       />
       <div class="top__desc">
@@ -313,7 +311,7 @@
       <div class="about__images--instagram"></div>
     </section>
     <!-- /.about section-primary -->
-    <section class="dribbble">
+    <section class="dribbble" id="store">
       <h2 class="title--h2">Dribbble</h2>
       <p class="section-primary__text">
         Each dribbble shot is made with love and care. Do check out my work on
@@ -332,7 +330,7 @@
       />
     </section>
     <!-- /.dribble -->
-    <section class="reviews section-primary">
+    <section class="reviews section-primary" id="process">
       <div class="container">
         <div class="reviews__content">
           <div class="reviews__content-col">
@@ -529,24 +527,24 @@
         <nav class="footer-nav">
           <ul class="footer-nav__list">
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#experience-page">Home</a>
+              <a class="footer-nav__list-link" href="#header">Home</a>
             </li>
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#work-page">About</a>
+              <a class="footer-nav__list-link" href="#about">About</a>
             </li>
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#photography-page">Work</a>
+              <a class="footer-nav__list-link" href="#experience-page">Work</a>
             </li>
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#contact-page">Process</a>
+              <a class="footer-nav__list-link" href="#process">Process</a>
             </li>
           </ul>
           <ul class="footer-nav__list">
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#contact-page">Store</a>
+              <a class="footer-nav__list-link" href="#store">Store</a>
             </li>
             <li class="footer-nav__list-item hvr-underline-from-left">
-              <a class="footer-nav__list-link" href="#contact-page">Blog</a>
+              <a class="footer-nav__list-link" href="#photography-page">Blog</a>
             </li>
             <li class="footer-nav__list-item hvr-underline-from-left">
               <a class="footer-nav__list-link" href="#contact-page"
@@ -554,7 +552,6 @@
               >
             </li>
           </ul>
-
           <!-- /.nav-menu__list -->
         </nav>
       </div>
