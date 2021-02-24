@@ -667,7 +667,8 @@ select:-webkit-autofill:focus {
 }
 
 .footer-info {
-  margin-top: 144px;
+  padding: 0 72px;
+  margin-top: 46px;
   font-size: 1.6rem;
   line-height: 24px;
 }
@@ -883,6 +884,10 @@ select:-webkit-autofill:focus {
 
   .footer > .container {
     margin: 0;
+  }
+
+  .footer-info {
+    padding: 0;
   }
 }
 
