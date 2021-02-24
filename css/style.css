@@ -686,6 +686,11 @@ select:-webkit-autofill:focus {
   color: #fff;
 }
 
+.footer-info {
+  margin-top: 46px;
+  width: 100%;
+}
+
 .hvr-underline-from-left {
   display: inline-block;
   vertical-align: middle;
@@ -762,6 +767,10 @@ select:-webkit-autofill:focus {
   .footer {
     padding: 80px 50px;
   }
+
+  .footer > .container {
+    margin: 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -782,7 +791,7 @@ select:-webkit-autofill:focus {
   }
 
   .header__img {
-    padding: 32px 0 0 40px;
+    padding: 32px 0 24px 40px;
     background-color: transparent;
     width: 100%;
   }
@@ -849,10 +858,6 @@ select:-webkit-autofill:focus {
 
   .feedback-form {
     width: 400px;
-  }
-
-  .footer-nav {
-    margin-left: 120px;
   }
 
   .footer-nav__list:nth-child(1) {
@@ -1343,10 +1348,11 @@ select:-webkit-autofill:focus {
   }
   .feedback__content-desc {
     width: 100%;
+    padding-right: 0;
   }
 
   .feedback__content-form {
-    margin: 0 auto;
+    margin-left: 0;
   }
 
   .feedback-form {
@@ -1354,12 +1360,12 @@ select:-webkit-autofill:focus {
   }
 
   .footer {
-    height: 100vh;
     padding: 48px 0;
   }
 
   .footer-col {
     width: 100%;
+    margin-bottom: 50px;
   }
 
   .footer > .container {
@@ -1372,8 +1378,6 @@ select:-webkit-autofill:focus {
   }
 
   .footer-info {
-    margin-top: 0;
-    transform: translateY(430px);
-    width: 100%;
+    padding: 0 20px 0;
   }
 }
