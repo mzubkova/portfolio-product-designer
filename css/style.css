@@ -560,7 +560,6 @@ select:-webkit-autofill:focus {
 
 .tabs__nav > .ui-tabs-active,
 .ui-tabs-active .tabs__nav-item {
-  transition: all 0.5s;
   color: #fff;
   text-align: center;
   background-color: #5221e6;
@@ -754,6 +753,7 @@ select:-webkit-autofill:focus {
 }
 
 /* Slider */
+
 .slick-slider {
   position: relative;
   display: block;
@@ -799,10 +799,12 @@ select:-webkit-autofill:focus {
   position: relative;
   top: 0;
   left: 0;
+
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 .slick-track:before,
 .slick-track:after {
   display: table;
@@ -820,8 +822,6 @@ select:-webkit-autofill:focus {
 .slick-slide {
   display: none;
   float: left;
-  height: 100%;
-  min-height: 1px;
 }
 
 [dir="rtl"] .slick-slide {
@@ -838,6 +838,10 @@ select:-webkit-autofill:focus {
 
 .slick-slide.dragging img {
   pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
 }
 
 .slick-loading .slick-slide {
