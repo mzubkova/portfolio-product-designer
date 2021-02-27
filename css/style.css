@@ -177,7 +177,6 @@ select:-webkit-autofill:focus {
 }
 
 .header {
-  background-color: #181823;
   display: flex;
 }
 
@@ -187,21 +186,23 @@ select:-webkit-autofill:focus {
   width: 540px;
 }
 
+.overlay {
+  width: 100%;
+}
+
 .navBurger {
   display: none;
 }
 
 .nav-menu {
-  padding: 32px 72px 110px;
+  background-color: #181823;
+  padding: 32px 72px 110px 0;
   margin-left: auto;
 }
 
 .nav-menu__list {
   display: flex;
-}
-
-.nav-menu__item {
-  margin-right: 48px;
+  justify-content: flex-end;
 }
 
 .nav-menu__link {
@@ -242,16 +243,6 @@ select:-webkit-autofill:focus {
 
 .top__img {
   position: relative;
-}
-
-.top::before {
-  width: 500px;
-  height: 84px;
-  background-color: #000;
-  position: absolute;
-  content: "";
-  bottom: 0px;
-  z-index: -2;
 }
 
 .top__desc {
@@ -927,10 +918,6 @@ select:-webkit-autofill:focus {
     margin-right: 0;
   }
 
-  .top {
-    background-color: #000;
-  }
-
   .top__title {
     font-size: 6rem;
   }
@@ -1002,8 +989,9 @@ select:-webkit-autofill:focus {
     padding: 80px 40px;
   }
 
-  .top::before {
-    display: none;
+  .nav-menu,
+  .top {
+    background-color: #000;
   }
 
   .top__title {
@@ -1144,6 +1132,7 @@ select:-webkit-autofill:focus {
   .navBurger:after {
     width: 80%;
   }
+
   .navBurger.active {
     z-index: 10;
     background: transparent;
@@ -1298,6 +1287,11 @@ select:-webkit-autofill:focus {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
+  }
+
+  .nav-menu {
+    padding: 20px;
+    background-color: transparent;
   }
 
   .title--h2 {
